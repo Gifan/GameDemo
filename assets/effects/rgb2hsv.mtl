@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.Material",
+  "_name": "rgb2hsv",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "31c3e5fa-6784-4188-9ce1-9504a928e4ed"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {
+        "USE_TEXTURE": true,
+        "USE_CHANGEHSV": true
+      },
+      "props": {
+        "hsv": {
+          "__type__": "cc.Vec4",
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 0
+        }
+      }
+    }
+  }
+}

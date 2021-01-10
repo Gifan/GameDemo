@@ -1,0 +1,8 @@
+{
+  "engine": "cocos-creator-js",
+  "packages": "packages",
+  "name": "GameDemo",
+  "id": "354dccc1-54ea-4a45-9fae-4b7d8ab169c2",
+  "version": "2.4.3",
+  "isNew": false
+}

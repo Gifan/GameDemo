@@ -14205,6 +14205,10 @@ declare namespace cc {
 		Returns the maximum value in x, y. 
 		*/
 		maxAxis(): number;	
+
+		perp():Vec2;
+        sign():number;
+        truncate(max:number):Vec2;
 	}	
 	/** !#en Representation of 3D vectors and points.
 	!#zh 表示 3D 向量和坐标 */

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- 样式 -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- 脚本 -->
+    <script type="text/javascript" src="../../../lib/vue.global.prod.js" defer></script>
+    <script type="text/javascript" src="index.js" defer></script>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="title">{{ titleLabel }}</div>
+        <div class="container">
+            <!-- 选择 -->
+            <div class="property">
+                <div class="label">
+                    <span class="text">{{ selectLabel }}</span>
+                    <span class="tooltip">{{ selectTooltipLabel }}</span>
+                </div>
+                <div class="content">
+                    <select v-model="selectKey">
+                        <option v-for="item in presets" :key="item.key" :value="item.key">{{ item.name }}</option>
+                    </select>
+                </div>
+            </div>
+            <!-- 自定义 -->
+            <div class="property">
+                <div class="label">
+                    <span class="text">{{ customLabel }}</span>
+                    <span class="tooltip">{{ customTooltipLabel }}</span>
+                </div>
+                <div class="content">
+                    <input v-model="customKey" :placeholder="customPlaceholderLabel" />
+                </div>
+            </div>
+            <!-- 自动检查更新 -->
+            <div class="property">
+                <div class="label">
+                    <span class="text">{{ autoCheckLabel }}</span>
+                    <span class="tooltip">{{ autoCheckTooltipLabel }}</span>
+                </div>
+                <div class="content">
+                    <input type="checkbox" v-model="autoCheckUpdate" />
+                </div>
+            </div>
+            <!-- 快捷键参考 -->
+            <div class="tip">
+                <span>{{ referenceLabel }}</span>
+                <a href="https://www.electronjs.org/docs/api/accelerator" target="_blank">{{ acceleratorLabel }}</a>
+            </div>
+            <!-- Git 仓库 -->
+            <div class="tip">
+                <span>{{ repositoryLabel }}</span>
+                <a href="https://gitee.com/ifaswind/ccc-quick-finder" target="_blank">ccc-quick-finder</a>
+            </div>
+            <div class="line"></div>
+            <!-- 应用按钮 -->
+            <button class="apply-btn" @click="onApplyBtnClick">{{ applyLabel }}</button>
+        </div>
+    </div>
+</body>
+
+</html>
